@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/HomePage";
+import Footer from "./components/Footer";
 
 //import "./App.css";
 
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      <Footer />
     </>
   );
 }

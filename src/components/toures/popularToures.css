@@ -1,0 +1,13 @@
+.swiper {
+  margin-left: 45px;
+}
+.swiper-wrapper {
+  gap: 20px;
+}
+
+.swiper-slide {
+  width: 340px !important;
+}
+.swiper-slide-active {
+  width: 340px;
+}

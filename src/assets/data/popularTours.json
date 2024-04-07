@@ -1,0 +1,50 @@
+[
+  {
+    "img": "/public/tourImgs/barsa.png",
+    "destination": "Barcelona, Spain",
+    "packet": "2 adults, 7 days",
+    "price": "2400$"
+  },
+  {
+    "img": "/public/tourImgs/roma.png",
+    "destination": "Rome, Italy",
+    "packet": "2 adults, 3 days",
+    "price": "1800$"
+  },
+  {
+    "img": "/public/tourImgs/paris.png",
+    "destination": "Paris, France",
+    "packet": "2 adults, 4 days",
+    "price": "2100$"
+  },
+  {
+    "img": "/public/tourImgs/luxor.png",
+    "destination": "Luxor City, Egypt",
+    "packet": "2 adults,3 days",
+    "price": "800$"
+  },
+  {
+    "img": "/public/tourImgs/barsa.png",
+    "destination": "Barcelona, Spain",
+    "packet": "2 adults, 7 days",
+    "price": "2400$"
+  },
+  {
+    "img": "/public/tourImgs/roma.png",
+    "destination": "Rome, Italy",
+    "packet": "2 adults, 3 days",
+    "price": "1800$"
+  },
+  {
+    "img": "/public/tourImgs/paris.png",
+    "destination": "Paris, France",
+    "packet": "2 adults, 4 days",
+    "price": "2100$"
+  },
+  {
+    "img": "/public/tourImgs/luxor.png",
+    "destination": "Luxor City, Egypt",
+    "packet": "2 adults,3 days",
+    "price": "800$"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "img": "/serviceImages/plane.png",
+    "book": "Book Flight",
+    "description": "book memorable journey with our flight booking services! we're thrilled to present you flight options to suit your travel needs."
+  },
+  {
+    "img": "/serviceImages/hotel.png",
+    "book": "Book Hotels",
+    "description": "book memorable journey with our flight booking services! we're thrilled to present you flight options to suit your travel needs."
+  },
+  {
+    "img": "/serviceImages/cruice.png",
+    "book": "Book Cruises",
+    "description": "book memorable journey with our flight booking services! we're thrilled to present you flight options to suit your travel needs."
+  },
+  {
+    "img": "/serviceImages/family.png",
+    "book": "Book family Vacation",
+    "description": "book memorable journey with our flight booking services! we're thrilled to present you flight options to suit your travel needs."
+  }
+]
