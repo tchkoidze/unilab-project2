@@ -4,6 +4,9 @@ import calendar from "../assets/calendar.svg";
 import flights from "../assets/data/flights.json";
 import airline from "../assets/Gairline.png";
 import ArrowDown from "../svg/Arrow-down";
+import card from "../assets/Credit_Card_01.svg";
+import bag from "../assets/Handbag.svg";
+import scase from "../assets/Suitcase.svg";
 
 function Flights() {
   return (
@@ -113,16 +116,16 @@ function Flights() {
         </div>
       </section>
       {/*filter */}
-      <section className="px-[10%] font-roboto">
-        <ul className="list-none font-roboto font-normal text-2xl leading-[29px] bg-white ">
+      <section className=" mx-[10%] font-roboto ">
+        <ul className="list-none font-roboto font-normal text-2xl leading-[29px] bg-white pl-6 pr-[18px] rounded-xl ">
           <li className="">Cheapest</li>
           <li className="w-[129px] border-y-2 border-orange py-5 my-5">
             Quickest
           </li>
           <li>Best</li>
         </ul>
-        <div>
-          <div className="font-normal text-2xl leading-[28px]">
+        <div className="bg-white mt-6 rounded-xl">
+          <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px] ">
             <button className="flex">
               Stops <ArrowDown />
             </button>
@@ -142,35 +145,35 @@ function Flights() {
             </ul>
           </div>
 
-          <div className="font-normal text-2xl leading-[28px]">
+          <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
             <button className="flex">
               Times
               <ArrowDown />
             </button>
           </div>
 
-          <div className="font-normal text-2xl leading-[28px]">
+          <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
             <button className="flex">
               Airlines
               <ArrowDown />
             </button>
           </div>
 
-          <div className="font-normal text-2xl leading-[28px]">
+          <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
             <button className="flex">
               Airports
               <ArrowDown />
             </button>
           </div>
 
-          <div className="font-normal text-2xl leading-[28px]">
+          <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
             <button className="flex">
               Duration
               <ArrowDown />
             </button>
           </div>
 
-          <div className="font-normal text-2xl leading-[28px]">
+          <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
             <button className="flex">
               Price
               <ArrowDown />
@@ -179,7 +182,7 @@ function Flights() {
             <div
               x-data="range()"
               x-init="mintrigger(); maxtrigger()"
-              className="relative max-w-xl w-full"
+              className="relative max-w-xl w-full "
             >
               <div>
                 <input
@@ -241,11 +244,40 @@ function Flights() {
             </div>
           </div>
 
-          <div className="font-normal text-2xl leading-[28px]">
+          <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
             <button className="flex">
               Price Calculator
               <ArrowDown />
             </button>
+            <ul className="text-xl leading-[23px]">
+              <li>
+                <div className="flex">
+                  <img src={card} alt="" />
+                  <p>Payment method</p>
+                </div>
+                <button className="w-full border border-black py-2.5 mt-2.5">
+                  Choose payment method
+                </button>
+              </li>
+              <li className="my-5">
+                <div className="flex">
+                  <img src={bag} alt="" />
+                  <p>Carry-on bag</p>
+                </div>
+                <button className="w-full border border-black py-2.5 mt-2.5">
+                  Select bags (0)
+                </button>
+              </li>
+              <li>
+                <div className="flex">
+                  <img src={scase} alt="" />
+                  <p>Checked bag</p>
+                </div>
+                <button className="w-full border border-black py-2.5 mt-2.5">
+                  Select bags (0)
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
