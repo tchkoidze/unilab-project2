@@ -19,6 +19,8 @@ export default {
       colors: {
         black: "#424244",
         orange: "#FF6700",
+        "orange-hover": "#C85100",
+        lightOr: "#FF8C3E",
       },
     },
   },

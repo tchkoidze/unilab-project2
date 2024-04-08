@@ -1,0 +1,162 @@
+[
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "12:00",
+    "landing": "19:00",
+    "duration": "7",
+    "stop": 2,
+    "price": "600$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "12:00",
+    "landing": "17:00",
+    "duration": "5",
+    "stop": null,
+    "price": "400$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "09:00",
+    "landing": "16:00",
+    "duration": "7",
+    "stop": 1,
+    "price": "550$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "11:00",
+    "landing": "20:00",
+    "duration": "9",
+    "stop": 2,
+    "price": "730$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "07:00",
+    "landing": "10:00",
+    "duration": "3",
+    "stop": null,
+    "price": "290$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "19:00",
+    "landing": "21:00",
+    "duration": "3",
+    "stop": null,
+    "price": "320$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "12:00",
+    "landing": "24:00",
+    "duration": "7",
+    "stop": 1,
+    "price": "670$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "12:00",
+    "landing": "18:00",
+    "duration": "6",
+    "stop": null,
+    "price": "530$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "14:00",
+    "landing": "22:00",
+    "duration": "8",
+    "stop": 1,
+    "price": "740$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "12:00",
+    "landing": "15:00",
+    "duration": "3",
+    "stop": null,
+    "price": "320$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "13:00",
+    "landing": "19:00",
+    "duration": "6",
+    "stop": null,
+    "price": "450$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "14:00",
+    "landing": "21:00",
+    "duration": "7",
+    "stop": null,
+    "price": "610$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "15:00",
+    "landing": "22:00",
+    "duration": "7",
+    "stop": 2,
+    "price": "700$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "16:00",
+    "landing": "23:00",
+    "duration": "7",
+    "stop": 1,
+    "price": "590$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "17:00",
+    "landing": "24:00",
+    "duration": "7",
+    "stop": null,
+    "price": "500$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "18:00",
+    "landing": "24:00",
+    "duration": "6",
+    "stop": 1,
+    "price": "640$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "19:00",
+    "landing": "22:00",
+    "duration": "3",
+    "stop": null,
+    "price": "380$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "20:00",
+    "landing": "22:00",
+    "duration": "2",
+    "stop": null,
+    "price": "270$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "21:00",
+    "landing": "24:00",
+    "duration": "4",
+    "stop": null,
+    "price": "430$"
+  },
+  {
+    "comp": "Georgian Airlines",
+    "takeoff": "22:00",
+    "landing": "24:00",
+    "duration": "4",
+    "stop": null,
+    "price": "390$"
+  }
+]

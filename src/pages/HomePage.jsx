@@ -77,8 +77,8 @@ function Home() {
 
         <Blogs />
       </section>
-      <section className="px-[10%] py-4 bg-[#E0E0E0] font-roboto font-normal text-xl leading-[23px] ">
-        <form className="grid grid-rows-1 gap-3">
+      <section className="px-[10%] py-4 bg-[#E0E0E0] font-roboto font-normal text-xl leading-[23px] tablet:px-[5%] ">
+        <form className="grid grid-cols-1  gap-3 tablet:grid-cols-2  ">
           <select
             name="location"
             id="location"
