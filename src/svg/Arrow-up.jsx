@@ -2,8 +2,8 @@ function Arrowup() {
   return (
     <>
       <svg
-        width="41"
-        height="40"
+        width="32"
+        height="32"
         viewBox="0 0 41 40"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -11,11 +11,12 @@ function Arrowup() {
       >
         <path
           d="M8.83325 26.6667L20.4999 15L32.1666 26.6667"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </>
   );
 }
+export default Arrowup;

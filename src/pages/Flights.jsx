@@ -4,11 +4,19 @@ import calendar from "../assets/calendar.svg";
 import flights from "../assets/data/flights.json";
 import airline from "../assets/Gairline.png";
 import ArrowDown from "../svg/Arrow-down";
+import Arrowup from "../svg/Arrow-up";
 import card from "../assets/Credit_Card_01.svg";
 import bag from "../assets/Handbag.svg";
 import scase from "../assets/Suitcase.svg";
+import MultiRangeSlider from "../components/rangeSlider/RangeSlider";
+import Slider from "react-slider";
+import { useState } from "react";
 
 function Flights() {
+  const [stopOPen, setStopOPen] = useState(false);
+  const [timesOPen, setTimesOPen] = useState(false);
+  const [durationOPen, setDurationOPen] = useState(false);
+
   return (
     <main className="font-roboto bg-[#F6F6F6]">
       <nav>
@@ -73,8 +81,11 @@ function Flights() {
       </section>
       <section className="px-[10%]">
         <div className="grid gap-6">
-          {flights.map((flights) => (
-            <div className="bg-white px-[16.5px] py-3 rounded-lg tablet:px-[60px] tablet:py-[30px]">
+          {flights.map((flights, index) => (
+            <div
+              key={index}
+              className="bg-white px-[16.5px] py-3 rounded-lg tablet:px-[60px] tablet:py-[30px]"
+            >
               <div className="flex justify-between ">
                 <div className="flex flex-col items-center">
                   <img
@@ -124,128 +135,91 @@ function Flights() {
           </li>
           <li>Best</li>
         </ul>
-        <div className="bg-white mt-6 rounded-xl">
+        <div className="grid grid-cols-1 gap-5 bg-white mt-6 rounded-xl py-5">
           <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px] ">
-            <button className="flex">
-              Stops <ArrowDown />
+            <button
+              onClick={() => setStopOPen(!stopOPen)}
+              className="w-full flex justify-between "
+            >
+              Stops {stopOPen ? <Arrowup /> : <ArrowDown />}
             </button>
-            <ul className="  ">
-              <li className="flex">
-                <div className="w-[30px] h-[30px] border border-black "></div>{" "}
-                <span>Direct</span>
-              </li>
-              <li className="flex">
-                <div className="w-[30px] h-[30px] border border-black "></div>{" "}
-                <span>One stop</span>
-              </li>
-              <li className="flex">
-                <div className="w-[30px] h-[30px] border border-black "></div>{" "}
-                <span>Two stops</span>
-              </li>
-            </ul>
+            {stopOPen && (
+              <ul className="flex flex-col gap-5 mt-5">
+                <li className="flex gap-5">
+                  <div className="w-[30px] h-[30px] border border-black "></div>{" "}
+                  <span>Direct</span>
+                </li>
+                <li className="flex gap-5">
+                  <div className="w-[30px] h-[30px] border border-black "></div>{" "}
+                  <span>One stop</span>
+                </li>
+                <li className="flex gap-5">
+                  <div className="w-[30px] h-[30px] border border-black "></div>{" "}
+                  <span>Two stops</span>
+                </li>
+              </ul>
+            )}
           </div>
 
-          <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
-            <button className="flex">
+          <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px] ">
+            <button
+              onClick={() => setTimesOPen(!timesOPen)}
+              className="w-full flex justify-between"
+            >
               Times
-              <ArrowDown />
+              {timesOPen ? <Arrowup /> : <ArrowDown />}
             </button>
+            {timesOPen && (
+              <>
+                <div className="mt-6 mb-5">
+                  <p className="mb-2.5">Take off-Tbilisi</p>
+                  <MultiRangeSlider min={12} max={24} step={1} value={""} />
+                </div>
+                <div>
+                  <p className="mb-2.5">Take off-Paris</p>
+                  <MultiRangeSlider min={12} max={24} step={1} value={""} />
+                </div>
+              </>
+            )}
           </div>
 
           <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
-            <button className="flex">
+            <button className="w-full flex justify-between">
               Airlines
               <ArrowDown />
             </button>
           </div>
 
           <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
-            <button className="flex">
+            <button className="w-full flex justify-between">
               Airports
               <ArrowDown />
             </button>
           </div>
 
           <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
-            <button className="flex">
+            <button
+              onClick={() => setDurationOPen(!durationOPen)}
+              className="w-full flex justify-between"
+            >
               Duration
-              <ArrowDown />
+              {durationOPen ? <Arrowup /> : <ArrowDown />}
             </button>
+            {durationOPen && (
+              <MultiRangeSlider min={0} max={30} step={1} value={"Hours"} />
+            )}
           </div>
 
           <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
-            <button className="flex">
+            <button className="w-full flex justify-between">
               Price
               <ArrowDown />
             </button>
-
-            <div
-              x-data="range()"
-              x-init="mintrigger(); maxtrigger()"
-              className="relative max-w-xl w-full "
-            >
-              <div>
-                <input
-                  type="range"
-                  step="100"
-                  min="0"
-                  max="1000"
-                  className="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer"
-                />
-
-                <input
-                  type="range"
-                  step="100"
-                  min="0"
-                  max="1000"
-                  className="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer"
-                />
-
-                <div className="relative z-10 h-2">
-                  <div className="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-gray-200"></div>
-
-                  <div
-                    className="absolute z-20 top-0 bottom-0 rounded-md bg-green-300"
-                    x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"
-                  ></div>
-
-                  <div
-                    className="absolute z-30 w-6 h-6 top-0 left-0 bg-green-300 rounded-full -mt-2 -ml-1"
-                    x-bind:style="'left: '+minthumb+'%'"
-                  ></div>
-
-                  <div
-                    className="absolute z-30 w-6 h-6 top-0 right-0 bg-green-300 rounded-full -mt-2 -mr-3"
-                    x-bind:style="'right: '+maxthumb+'%'"
-                  ></div>
-                </div>
-              </div>
-
-              <div className="flex justify-between items-center py-5">
-                <div>
-                  <input
-                    type="text"
-                    maxlength="5"
-                    x-on:input="mintrigger"
-                    x-model="minprice"
-                    className="px-3 py-2 border border-gray-200 rounded w-24 text-center"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    maxlength="5"
-                    x-on:input="maxtrigger"
-                    x-model="maxprice"
-                    className="px-3 py-2 border border-gray-200 rounded w-24 text-center"
-                  />
-                </div>
-              </div>
-            </div>
+            <MultiRangeSlider min={200} max={3000} step={50} value={"$"} />
           </div>
 
           <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
-            <button className="flex">
+            <button className=" w-full flex justify-between">
               Price Calculator
               <ArrowDown />
             </button>
