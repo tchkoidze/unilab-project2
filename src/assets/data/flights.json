@@ -12,7 +12,7 @@
     "takeoff": "12:00",
     "landing": "17:00",
     "duration": "5",
-    "stop": null,
+    "stop": 0,
     "price": "400$"
   },
   {
@@ -36,7 +36,7 @@
     "takeoff": "07:00",
     "landing": "10:00",
     "duration": "3",
-    "stop": null,
+    "stop": 0,
     "price": "290$"
   },
   {
@@ -44,7 +44,7 @@
     "takeoff": "19:00",
     "landing": "21:00",
     "duration": "3",
-    "stop": null,
+    "stop": 0,
     "price": "320$"
   },
   {
@@ -60,7 +60,7 @@
     "takeoff": "12:00",
     "landing": "18:00",
     "duration": "6",
-    "stop": null,
+    "stop": 0,
     "price": "530$"
   },
   {
@@ -76,7 +76,7 @@
     "takeoff": "12:00",
     "landing": "15:00",
     "duration": "3",
-    "stop": null,
+    "stop": 0,
     "price": "320$"
   },
   {
@@ -84,7 +84,7 @@
     "takeoff": "13:00",
     "landing": "19:00",
     "duration": "6",
-    "stop": null,
+    "stop": 0,
     "price": "450$"
   },
   {
@@ -92,7 +92,7 @@
     "takeoff": "14:00",
     "landing": "21:00",
     "duration": "7",
-    "stop": null,
+    "stop": 0,
     "price": "610$"
   },
   {
@@ -116,7 +116,7 @@
     "takeoff": "17:00",
     "landing": "24:00",
     "duration": "7",
-    "stop": null,
+    "stop": 0,
     "price": "500$"
   },
   {
@@ -132,7 +132,7 @@
     "takeoff": "19:00",
     "landing": "22:00",
     "duration": "3",
-    "stop": null,
+    "stop": 0,
     "price": "380$"
   },
   {
@@ -140,7 +140,7 @@
     "takeoff": "20:00",
     "landing": "22:00",
     "duration": "2",
-    "stop": null,
+    "stop": 0,
     "price": "270$"
   },
   {
@@ -148,7 +148,7 @@
     "takeoff": "21:00",
     "landing": "24:00",
     "duration": "4",
-    "stop": null,
+    "stop": 0,
     "price": "430$"
   },
   {
@@ -156,7 +156,7 @@
     "takeoff": "22:00",
     "landing": "24:00",
     "duration": "4",
-    "stop": null,
+    "stop": 0,
     "price": "390$"
   }
 ]
