@@ -23,9 +23,17 @@ function Flights() {
   const [showFilter, setShowFilter] = useState(false);
   const [showFlight, setShowFlight] = useState(true);
 
-  const [price, setPrice] = useState({ minPrice: null, maxPrice: null });
+  //const [price, setPrice] = useState({ minPrice: null, maxPrice: null });
 
-  console.log(price);
+  const [durationRange, setDurationRange] = useState({ min: 0, max: 30 });
+  const [priceRange, setPriceRange] = useState({ min: 200, max: 3000 });
+  const [filteredFlights, setFilteredFlights] = useState([]);
+
+  /*const [filters, setFilters] = useState([
+    selectStop,
+    { price: { min: null, max: null } },
+    { duration: { min: null, max: null } },
+  ]);*/
 
   const handleOptionClick = (option) => {
     setSelectStop((prevOption) => {
@@ -59,6 +67,44 @@ function Flights() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // Effect to filter flights when filter options change
+  useEffect(() => {
+    filterFlights();
+    console.log(filteredFlights);
+    console.log("price is : ", priceRange);
+    console.log("duration is : ", durationRange);
+  }, [selectStop, durationRange, priceRange]);
+
+  // Filtering function
+  const filterFlights = () => {
+    let filteredData = [...flights]; // Copy the original data
+
+    // Filter by stops
+    if (selectStop) {
+      filteredData = filteredData.filter(
+        (flight) =>
+          flight.stop ===
+          (selectStop === "direct" ? 0 : selectStop === "one stop" ? 1 : 2)
+      );
+    }
+
+    // Filter by duration range
+    filteredData = filteredData.filter(
+      (flight) =>
+        parseInt(flight.duration) >= durationRange.min &&
+        parseInt(flight.duration) <= durationRange.max
+    );
+
+    // Filter by price range
+    filteredData = filteredData.filter(
+      (flight) =>
+        parseInt(flight.price.replace("$", "")) >= priceRange.min &&
+        parseInt(flight.price.replace("$", "")) <= priceRange.max
+    );
+
+    setFilteredFlights(filteredData);
+  };
 
   return (
     <main className="font-roboto bg-[#F6F6F6]">
@@ -241,7 +287,14 @@ function Flights() {
                   {durationOPen ? <Arrowup /> : <ArrowDown />}
                 </button>
                 {durationOPen && (
-                  <MultiRangeSlider min={0} max={30} step={1} value={"Hours"} />
+                  <MultiRangeSlider
+                    min={0}
+                    max={30}
+                    step={1}
+                    value={"Hours"}
+                    //setValue={setFilters}
+                    onChange={(min, max) => setDurationRange({ min, max })}
+                  />
                 )}
               </div>
 
@@ -259,7 +312,8 @@ function Flights() {
                     max={3000}
                     step={50}
                     value={"$"}
-                    setValue={setPrice}
+                    //setValue={setPrice}
+                    onChange={(min, max) => setDurationRange({ min, max })}
                   />
                 )}
               </div>
@@ -317,7 +371,7 @@ function Flights() {
               filters
             </button>
             <div className="grid gap-6">
-              {flights.map((flights, index) => (
+              {filteredFlights.map((flights, index) => (
                 <div
                   key={index}
                   className="bg-white px-[16.5px] py-3 rounded-lg tablet:px-[60px] tablet:py-[30px]"
