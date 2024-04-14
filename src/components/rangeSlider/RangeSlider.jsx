@@ -22,16 +22,6 @@ const MultiRangeSlider = ({ min, max, step, value, onChange }) => {
     [min, max]
   );
 
-  /*useEffect(() => {
-    if (initialized) {
-      console.log(7);
-      console.log("min value : ", minVal);
-    } else {
-      setInitialized(true);
-    }
-  }, [minVal, maxVal, initialized]);*/
-  // Call onChange callback with new range values
-
   useEffect(() => {
     onChange(minVal, maxVal);
   }, [minVal, maxVal]);
@@ -71,15 +61,6 @@ const MultiRangeSlider = ({ min, max, step, value, onChange }) => {
           minValRef.current = value;
           console.log("value: ", value);
           console.log("min value: ", minVal);
-
-          /*setValue((prevPrice) => ({
-            ...prevPrice,
-            minPrice: value,
-          }));*/
-          /*setValue((prevData) => [
-            ...prevData,
-            { price: { min: value, max: maxVal } },
-          ]);*/
         }}
         className="thumb thumb--left"
         style={{ zIndex: minVal > max - 100 && "5" }}
@@ -96,11 +77,6 @@ const MultiRangeSlider = ({ min, max, step, value, onChange }) => {
           maxValRef.current = value;
           console.log("value: ", value);
           console.log("value: ", maxVal);
-
-          /*setValue((prevPrice) => ({
-            ...prevPrice,
-            maxPrice: value,
-          }));*/
         }}
         className="thumb thumb--right"
       />
@@ -122,3 +98,13 @@ const MultiRangeSlider = ({ min, max, step, value, onChange }) => {
 };
 
 export default MultiRangeSlider;
+
+/*useEffect(() => {
+    if (initialized) {
+      console.log(7);
+      console.log("min value : ", minVal);
+    } else {
+      setInitialized(true);
+    }
+  }, [minVal, maxVal, initialized]);*/
+// Call onChange callback with new range values
