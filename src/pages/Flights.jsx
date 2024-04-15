@@ -313,7 +313,7 @@ function Flights() {
                     step={50}
                     value={"$"}
                     //setValue={setPrice}
-                    onChange={(min, max) => setDurationRange({ min, max })}
+                    onChange={(min, max) => setPriceRange({ min, max })}
                   />
                 )}
               </div>
