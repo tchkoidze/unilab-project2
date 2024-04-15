@@ -397,7 +397,20 @@ function Flights() {
                       </div>
                       <div className="flex items-center gap-2 font-medium text-base leading-[19px] tablet:gap-5 ">
                         <span>{flights.takeoff}</span>
-                        <div className="w-[80px] h-[2px] bg-[#C85100] tablet:w-[174px]"></div>
+                        <div className="relative w-[80px] h-[2px] bg-[#C85100] tablet:w-[174px]">
+                          {/*[...Array(flights.stop)].map((_, i) => (
+                            <div
+                              key={i}
+                              className="absolute left-[calc(50% - 4px)] top-[50%] transform translate-y-[-50%] w-[8px] h-[8px] bg-black rounded-full tablet:w-[12px] tablet:h-[12px]"
+                            ></div>
+                          ))*/}
+                          {[...Array(flights.stop)].map((_, i) => (
+                            <div
+                              key={i}
+                              className="absolute left-[calc(50% - 4px)] top-[50%] transform translate(-50%, -50%) translateX(calc(-50% + 8px * ${i + 1})) w-[8px] h-[8px] bg-black rounded-full tablet:w-[12px] tablet:h-[12px]"
+                            ></div>
+                          ))}
+                        </div>
                         <span>{flights.landing}</span>
                         <p className="text-[#42424499] opacity-60 font-normal">
                           {flights.duration} houres
