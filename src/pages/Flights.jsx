@@ -194,7 +194,7 @@ function Flights() {
             >
               <img src={leftarrow} alt="arrow" /> filters
             </button>
-            <ul className="list-none font-roboto font-normal text-2xl leading-[29px] bg-white pl-6 pr-[18px] rounded-xl ">
+            <ul className="list-none font-roboto font-normal text-2xl leading-[29px] bg-white pl-6 pr-[18px] py-5 rounded-xl ">
               <li className="">Cheapest</li>
               <li className="w-[129px] border-y-2 border-orange py-5 my-5">
                 Quickest
