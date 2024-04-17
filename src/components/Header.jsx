@@ -1,6 +1,27 @@
+import { useEffect, useState } from "react";
+
 function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="fixed z-10 w-full   bg-slate-600">
+    <header
+      className={`fixed z-10 w-full   bg-slate-600 ${
+        isScrolled ? "bg-slate-600" : "bg-transparent"
+      }`}
+    >
       <nav className="flex justify-between mx-[45px]">
         <h1 className="font-kalnia font-medium text-2xl text-white  ">
           ExploreEra
