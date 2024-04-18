@@ -281,7 +281,7 @@ function Flights() {
               <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
                 <button
                   onClick={() => setDurationOPen(!durationOPen)}
-                  className="w-full flex justify-between mb-5"
+                  className="w-full flex justify-between"
                 >
                   Duration
                   {durationOPen ? <Arrowup /> : <ArrowDown />}
@@ -301,7 +301,7 @@ function Flights() {
               <div className="font-normal text-2xl leading-[28px] pl-6 pr-[18px]">
                 <button
                   onClick={() => setPriceOpen(!priceOpen)}
-                  className="w-full flex justify-between mb-5"
+                  className="w-full flex justify-between "
                 >
                   Price
                   {priceOpen ? <Arrowup /> : <ArrowDown />}
