@@ -10,7 +10,7 @@ function Home() {
       <div className="w-full min-h-[100%]   home-hero-mobile"></div>
       <div className="relative  ">
         <img src={h} alt="" />
-        <div className="flex flex-col items-center absolute bottom-14 left-[30%] ">
+        <div className="flex flex-col items-center absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2  ">
           <h3 className="font-roboto font-medium text-lg leading-[18.75px] tablet:text-2xl tablet:leading-[28.13px] desktop:text-[40px] desktop:leading-[47px]">
             Visit Mountains In
           </h3>
